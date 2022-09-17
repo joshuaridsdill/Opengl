@@ -63,13 +63,13 @@ int main(void)
         std::cout << elapsed_time << '\n';
 
         /* Render here */
-        glClearColor(sinf(r * elapsed_time), 0.0f, 0.0f, 1.0f);
+        glClearColor(sinf(r), 0.0f, 0.0f, 1.0f);
 
         glClear(GL_COLOR_BUFFER_BIT);
 
         //std::cout << sinf(r) << '\n';
 
-        r++;
+        r+=elapsed_time;
 
         glDrawArrays(GL_TRIANGLES, 0, 3);
 
